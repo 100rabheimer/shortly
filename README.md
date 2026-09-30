@@ -1,5 +1,4 @@
-# Shortly — URL Shortener API with Analytics (2026)
-
+# Shortly — URL Shortener API with Analytics
 A REST API like bit.ly. POST a long URL, get a short code back. Visiting the short link redirects (302) and records the click. An analytics endpoint returns total clicks, clicks per day, and referrers.
 
 **Live API:** https://shortly-kaa1.onrender.com
