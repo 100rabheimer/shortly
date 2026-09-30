@@ -1,0 +1,125 @@
+{
+  "info": {
+    "_postman_id": "98ac6459-48c0-4b7f-bf71-ded4e2ecc3e5",
+    "name": "Shortly API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52404799",
+    "_collection_link": "https://go.postman.co/collection/52404799-98ac6459-48c0-4b7f-bf71-ded4e2ecc3e5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "1 Shorten - valid URL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "   { \"url\": \"https://google.com\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://shortly-kaa1.onrender.com/api/shorten",
+          "protocol": "https",
+          "host": [
+            "shortly-kaa1",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "shorten"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "2 Shorten - invalid URL",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"url\": \"galat-url\" }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://shortly-kaa1.onrender.com/api/shorten",
+          "protocol": "https",
+          "host": [
+            "shortly-kaa1",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "api",
+            "shorten"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "3 Redirect - exists",
+      "protocolProfileBehavior": {
+        "followRedirects": false
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://shortly-kaa1.onrender.com/8Pc5Gmc",
+          "protocol": "https",
+          "host": [
+            "shortly-kaa1",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "8Pc5Gmc"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "4 Redirect - not found",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://shortly-kaa1.onrender.com/nahiHai123",
+          "protocol": "https",
+          "host": [
+            "shortly-kaa1",
+            "onrender",
+            "com"
+          ],
+          "path": [
+            "nahiHai123"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "5 Stats",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
