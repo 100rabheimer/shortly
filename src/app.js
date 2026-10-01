@@ -15,12 +15,14 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173",
+      process.env.FRONTEND_URL,
+    ].filter(Boolean),
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type"],
   })
 );
-
 // JSON request body ko parse karne ke liye
 app.use(express.json());
 
